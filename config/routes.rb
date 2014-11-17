@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  resources :users, controller: 'users', only: Clearance.configuration.user_actions
+  resources :users, controller: 'users', only: ['Clearance.configuration.user_actions','show']
   resource :session, controller: 'sessions', only: 'create'
     # get '/sign_in' => 'sessions#new'
     # delete '/sign_out' => 'sessions#destroy'
