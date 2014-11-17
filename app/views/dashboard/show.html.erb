@@ -1,0 +1,8 @@
+<p>Dashboard page</p>
+
+<%= form_for @post do |f| %>
+  <%= f.text_field :body, placeholder: 'Write your stuff here' %>
+  <%= f.submit 'Post!' %>
+<% end %>
+
+<%= render @posts %>

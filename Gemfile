@@ -10,6 +10,7 @@ gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 
+#For user authentication
 gem 'clearance'
 
 # Use CoffeeScript for .js.coffee assets and views
@@ -42,8 +43,9 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
-# Using the Bourbon for SASS mixins and Neat for grid systems
+# Using the Bourbon family for front-end styling
 gem 'bourbon'
 gem 'neat'
 gem 'bitters'
+gem 'refills'
 

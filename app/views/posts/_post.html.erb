@@ -1,0 +1,5 @@
+<%= div_for post do %>
+  <%= post.user.username %> said
+  <%= post.body %>
+  <%= link_to ("#{time_ago_in_words (post.created_at)} ago"), post %>
+<% end %>

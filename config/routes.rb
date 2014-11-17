@@ -1,13 +1,20 @@
 Rails.application.routes.draw do
 
-  # resources :users, controller: 'users', only: 'create'
   resources :users, controller: 'users', only: Clearance.configuration.user_actions
+  resource :session, controller: 'sessions', only: 'create'
+    # get '/sign_in' => 'sessions#new'
+    # delete '/sign_out' => 'sessions#destroy'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+  root 'home#welcome', via: :get
+
+  # resource :dashboard, only: 'show'
+  get '/dashboard' => 'dashboard#show'
+
+  resources :posts, only: ['create', 'show']
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
