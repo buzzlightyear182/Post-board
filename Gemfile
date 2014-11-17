@@ -42,3 +42,8 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+# Using the Bourbon for SASS mixins and Neat for grid systems
+gem 'bourbon'
+gem 'neat'
+gem 'bitters'
+
