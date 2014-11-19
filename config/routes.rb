@@ -14,7 +14,8 @@ Rails.application.routes.draw do
   # resource :dashboard, only: 'show'
   get '/dashboard' => 'dashboard#show'
 
-  resources :posts, only: ['create', 'show']
+  resources :posts, only: 'show'
+  resources :text_posts, only: 'create'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

@@ -8,3 +8,5 @@ This is just a simple Ruby on Rails 4 app, but I'm trying to use different/new t
 User authentication: [Clearance](https://github.com/thoughtbot/clearance)
 
 Front-end: Bourbon, Neat and [Bitters](http://bitters.bourbon.io/)
+
+Polymorphism association

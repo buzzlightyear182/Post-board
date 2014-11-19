@@ -1,9 +1,9 @@
 class DashboardController < ApplicationController
 
-  before_filter :authorize
+  before_action :authorize
 
   def show
-    @post = Post.new
+    @text_post = TextPost.new
     @posts = current_user.posts
   end
 end
