@@ -16,6 +16,7 @@ Rails.application.routes.draw do
 
   resources :posts, only: 'show'
   resources :text_posts, only: 'create'
+  resources :image_posts, only: 'create'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

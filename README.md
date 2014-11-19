@@ -10,3 +10,5 @@ User authentication: [Clearance](https://github.com/thoughtbot/clearance)
 Front-end: Bourbon, Neat and [Bitters](http://bitters.bourbon.io/)
 
 Polymorphism association
+
+File uploader: [Paperclip](https://github.com/thoughtbot/paperclip)

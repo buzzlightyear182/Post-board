@@ -49,3 +49,5 @@ gem 'neat'
 gem 'bitters'
 gem 'refills'
 
+gem 'paperclip'
+
