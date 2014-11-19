@@ -2,7 +2,6 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-
 #flash {
   .success {
     @extend %flash-success;
@@ -18,5 +17,86 @@
 
   .error {
     @extend %flash-error;
+  }
+}
+
+body {
+  margin: 0px;
+  @include outer-container;
+}
+
+.bar {
+  // @include background-image(
+  //   linear-gradient(
+  //     hsla(0, 100%, 100%, 0.25) 0%,
+  //     hsla(0, 100%, 100%, 0.08) 50%, transparent 50%),
+  //   linear-gradient($olive, darken($olive, 10%))
+  //   );
+  background-color: $turquoise;
+  color: white;
+  padding: 10px 0;
+  @include row(table);
+
+  a {
+    color: lighten($rose-coral,20%);
+  }
+}
+
+.bar .greeting {
+  @include span-columns(10 of 12);
+  padding-left: 10px;
+}
+
+.bar .button {
+  @include span-columns(2);
+}
+
+.button_to {
+  text-align: center;
+}
+
+header {
+  @include row(table);
+  @include fill-parent();
+}
+
+.content {
+  padding: 10px;
+  background-color: lighten(#BABFA0, 25%);
+}
+
+.dashboard {
+  @include fill-parent();
+}
+
+.dashboard h1 {
+  text-align: center;
+  padding: 10px 0;
+  color: darken($medium-gray,25%);
+}
+
+.dashboard .post_form {
+  @include span-columns(3);
+  @include pad(10px);
+  margin: 10px;
+  @include border-top-radius(10px);
+  @include border-right-radius(10px);
+  @include border-bottom-radius(10px);
+  @include border-left-radius(10px);
+
+  border: 3px solid $beige;
+  background-color: lighten($beige, 20%);
+  h4 {
+    padding: 10px 0;
+  }
+}
+
+.feed {
+  @include span-columns(9);
+  @include pad(10px);
+
+  .post {
+    border-bottom: 1px solid $beige;
+    padding: 10px 0;
   }
 }

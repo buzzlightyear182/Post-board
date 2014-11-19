@@ -6,21 +6,33 @@
   <%= csrf_meta_tag %>
 </head>
 <body>
-  <header>
-    <% if signed_in? -%>
-      Hello <%= current_user.username %>!
-      <%= button_to t('.sign_out'), sign_out_path, :method => :delete %>
-    <% else -%>
-      <%= link_to t('.sign_in'), sign_in_path %>
-    <% end -%>
-  </header>
+  <div id='container'>
+    <nav class="bar">
+      <% if signed_in? %>
+        <div class='greeting'>
+          <p>Hello <%= current_user.username %>!</p>
+        </div>
+        <div class='button'>
+        <%= button_to t('.sign_out'), sign_out_path, :method => :delete %>
+        </div>
+      <% else %>
+        <div class='greeting'>
+          <%= link_to t('.sign_in'), sign_in_path %>
+        </div>
+      <% end %>
+    </nav>
 
-  <div id="flash">
-    <% flash.each do |key, value| -%>
-      <div class="<%= key %>"><span><%=h value %></span></div>
-    <% end %>
+    <header>
+      <div id="flash">
+        <% flash.each do |key, value| -%>
+          <div class="<%= key %>"><span><%=h value %></span></div>
+        <% end %>
+      </div>
+    </header>
+
+    <div class='content'>
+      <%= yield %>
+    </div>
   </div>
-
-  <%= yield %>
 </body>
 </html>

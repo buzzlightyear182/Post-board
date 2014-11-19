@@ -1,13 +1,22 @@
-<p>Dashboard page</p>
+<div class='dashboard'>
+  <h1>Welcome to your Dashboard!</h1>
 
-<%= form_for @text_post do |f| %>
-  <%= f.text_field :body, placeholder: 'Write your stuff here' %>
-  <%= f.submit 'Post!' %>
-<% end %>
+  <div class='post_form'>
+    <h4>Write a text</h4>
+    <%= form_for @text_post do |f| %>
+      <%= f.text_field :body, placeholder: 'Write your stuff here' %>
+      <%= f.submit 'Post!' %>
+    <% end %>
 
-<%= form_for @image_post do |f| %>
-  <%= f.file_field :image %>
-  <%= f.submit 'Upload!' %>
-<% end %>
+    <h4>or post an image</h4>
+    <%= form_for @image_post do |f| %>
+      <%= f.file_field :image %>
+      <%= f.submit 'Upload!' %>
+    <% end %>
+  </div>
 
-<%= render @posts %>
+  <div class='feed'>
+    <h4>Post feed</h4>
+    <%= render @posts %>
+  </div>
+</div>
