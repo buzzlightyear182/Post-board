@@ -21,6 +21,7 @@ class UsersController < Clearance::UsersController
   def user_from_params
 
     #For creating username (not included in Clearance)
+    user_params = params[:user] || Hash.new
     username = user_params.delete(:username)
 
     email = user_params.delete(:email)

@@ -9,6 +9,8 @@ User authentication: [Clearance](https://github.com/thoughtbot/clearance)
 
 Front-end: Bourbon, Neat and [Bitters](http://bitters.bourbon.io/)
 
-Polymorphism association
+Complex associations with users following each other (using has_many, through and foreign_key)
+
+Polymorphism association for the posts
 
 File uploader: [Paperclip](https://github.com/thoughtbot/paperclip)

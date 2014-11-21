@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
 
-  resources :users, controller: 'users', only: ['Clearance.configuration.user_actions','show']
+  resources :users, controller: 'users', only: ['create','show','new'] do
+    post 'follow' => 'following_relationships#create'
+  end
+
   resource :session, controller: 'sessions', only: 'create'
     # get '/sign_in' => 'sessions#new'
     # delete '/sign_out' => 'sessions#destroy'
