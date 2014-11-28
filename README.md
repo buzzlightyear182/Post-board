@@ -13,4 +13,6 @@ Complex associations with users following each other (using has_many, through an
 
 Polymorphism association for the posts
 
+Refactor to reflect Single Responsibility Principle on MVC
+
 File uploader: [Paperclip](https://github.com/thoughtbot/paperclip)

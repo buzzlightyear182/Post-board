@@ -7,6 +7,13 @@ class Timeline
   end
 
   def posts
-    @user.posts
+    Post.where(user_id: post_user_ids)
+  end
+
+  private
+
+  def post_user_ids
+    @user.followed_user_ids + [@user.id]
+   #Generate SQL statement: SELECT * FROM Posts WHERE user_id IN [array of followed_user_ids and current_user_id]
   end
 end
