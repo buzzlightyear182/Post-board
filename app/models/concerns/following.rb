@@ -29,6 +29,10 @@ module Following
     followed_users.delete user
   end
 
+  def can_follow? user
+    self != user
+  end
+
   # module ClassMethods
   # methods defined here are going to extend the class, not the instance of it
   #   def with_followers

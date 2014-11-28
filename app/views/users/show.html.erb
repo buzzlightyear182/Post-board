@@ -1,7 +1,9 @@
 <h1><%= @user.username %></h1>
-<div class= 'follow'>
-  <%= follow_button @user %>
-</div>
+<% if current_user.can_follow? @user %>
+  <div class= 'follow'>
+    <%= follow_button @user %>
+  </div>
+<% end %>
 <hr>
 <div>
   <%= render @posts %>
