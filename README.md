@@ -9,10 +9,13 @@ User authentication: [Clearance](https://github.com/thoughtbot/clearance)
 
 Front-end: Bourbon, Neat and [Bitters](http://bitters.bourbon.io/)
 
+File uploader: [Paperclip](https://github.com/thoughtbot/paperclip)
+
 Complex associations with users following each other (using has_many, through and foreign_key)
 
 Polymorphism association for the posts
 
 Refactor to reflect Single Responsibility Principle on MVC
 
-File uploader: [Paperclip](https://github.com/thoughtbot/paperclip)
+Use of ActiveSupport::Concerns for User
+
