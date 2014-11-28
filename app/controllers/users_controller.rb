@@ -1,4 +1,9 @@
 class UsersController < Clearance::UsersController
+  respond_to :html
+
+  def index
+    @users = User.all
+  end
 
   def create
     @user = user_from_params

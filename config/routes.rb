@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
   resources :users, controller: 'users', only: ['create','show','new'] do
     post 'follow' => 'following_relationships#create'
+    delete 'follow' => 'following_relationships#destroy'
   end
 
   resource :session, controller: 'sessions', only: 'create'
@@ -17,6 +18,7 @@ Rails.application.routes.draw do
   # resource :dashboard, only: 'show'
   get '/dashboard' => 'dashboard#show'
 
+  resources :users, only: 'index'
   resources :posts, only: 'show'
   resources :text_posts, only: 'create'
   resources :image_posts, only: 'create'
