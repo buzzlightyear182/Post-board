@@ -3,8 +3,6 @@ class DashboardController < ApplicationController
   before_action :authorize
 
   def show
-    @text_post = TextPost.new
-    @image_post = ImagePost.new
-    @posts = current_user.posts
+    @dashboard = Dashboard.new current_user
   end
 end

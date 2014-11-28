@@ -3,13 +3,13 @@
 
   <div class='post_form'>
     <h4>Write a text</h4>
-    <%= form_for @text_post do |f| %>
+    <%= form_for @dashboard.new_text_post do |f| %>
       <%= f.text_field :body, placeholder: 'Write your stuff here' %>
       <%= f.submit 'Post!' %>
     <% end %>
 
     <h4>or post an image</h4>
-    <%= form_for @image_post do |f| %>
+    <%= form_for @dashboard.new_image_post do |f| %>
       <%= f.file_field :image %>
       <%= f.submit 'Upload!' %>
     <% end %>
@@ -17,6 +17,6 @@
 
   <div class='feed'>
     <h4>Post feed</h4>
-    <%= render @posts %>
+    <%= render @dashboard.timeline %>
   </div>
 </div>
