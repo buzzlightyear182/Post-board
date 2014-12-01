@@ -55,3 +55,4 @@ gem 'sunspot_rails'
 gem 'sunspot_solr'
 gem 'progress_bar'
 
+gem 'rails_12factor', group: :production
