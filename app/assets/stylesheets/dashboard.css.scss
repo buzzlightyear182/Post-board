@@ -76,6 +76,24 @@ body {
 header {
   @include row(table);
   @include fill-parent();
+  padding: 0 10px;
+}
+
+#github_link {
+    position: absolute;
+    @include button(simple, #F4D03F);
+    margin: 10px auto;
+    text-align: center;
+    float: right;
+
+    a {
+      color: white !important;
+    }
+  }
+
+.sign-in #github_link{
+  float: right;
+  position: relative;
 }
 
 .content {
