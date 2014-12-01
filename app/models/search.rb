@@ -1,5 +1,7 @@
 class Search
   attr_reader :term
+  include ActiveModel::Model #Necessary for Rails 4
+  extend ActiveModel::Naming
 
   def initialize options={}
     @term = options.fetch(:term, "")

@@ -34,7 +34,7 @@ body {
   //   );
   background-color: $turquoise;
   color: white;
-  padding: 10px 0;
+  padding-top: 10px;
   @include row(table);
 
   a {
@@ -45,6 +45,24 @@ body {
 .bar .greeting {
   @include span-columns(10 of 12);
   padding-left: 10px;
+
+  p {
+    @include span-columns(2);
+  }
+
+  .search_form {
+    display: inline;
+    @include span-columns(8);
+
+    #search_term {
+      @include span-columns(4 of 8);
+    }
+
+    .button_to {
+      display: inline !important;
+      @include span-columns(2 of 10);
+    }
+  }
 }
 
 .bar .button {

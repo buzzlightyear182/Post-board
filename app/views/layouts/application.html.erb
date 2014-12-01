@@ -11,6 +11,12 @@
       <% if signed_in? %>
         <div class='greeting'>
           <p>Hello <%= current_user.username %>!</p>
+          <div class='search_form'>
+            <%= form_for(:search, url: search_path(:search), :html => { :method => "GET" }) do |f| %>
+              <%= f.text_field :term %>
+              <%= f.submit "Search", :class=>'button_to'%>
+            <% end %>
+          </div>
         </div>
         <div class='button'>
         <%= button_to t('.sign_out'), sign_out_path, :method => :delete %>
