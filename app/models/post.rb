@@ -4,4 +4,10 @@ class Post < ActiveRecord::Base
   default_scope {order("created_at DESC")}
 
   validates :content, presence: true
+
+  def self.text_posts
+    where(content_type: 'TextPost')
+  end
+
+
 end
