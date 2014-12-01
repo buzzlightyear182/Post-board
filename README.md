@@ -19,3 +19,7 @@ Refactor to reflect Single Responsibility Principle on MVC
 
 Use of ActiveSupport::Concerns for User
 
+Use of extend ActiveModel::Naming
+
+Implement better search function with: [Sunspot](https://github.com/sunspot/sunspot)
+

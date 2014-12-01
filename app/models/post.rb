@@ -9,5 +9,10 @@ class Post < ActiveRecord::Base
     where(content_type: 'TextPost')
   end
 
+  searchable do
+    text :content do
+      content.index
+    end
+  end
 
 end

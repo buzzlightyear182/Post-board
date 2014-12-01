@@ -51,3 +51,7 @@ gem 'refills'
 
 gem 'paperclip'
 
+gem 'sunspot_rails'
+gem 'sunspot_solr'
+gem 'progress_bar'
+
